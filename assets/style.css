@@ -1,0 +1,266 @@
+/* @font-face {
+    font-family: MSsans-serif;
+    src: url(./fonts/MS\ Sans\ Serif\ 8pt.ttf);
+}
+*{
+    font-family: MSsans-serif;
+} */
+body{
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* padding: 0 75% 0 75%; */
+}
+.desktop{
+    width: 100%;
+    height: 100vh;
+    background-color: #008080;
+
+}
+.taskbar{
+    width: 100%;
+    height: 35px;
+    background: #c3c6cd;
+    border-top: 3px solid #deebf3;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.start-btn{
+    display: flex;
+    width: 100px;
+    height: 25px;
+    align-items: center;
+    background: #c3c6cd;
+    border-top: 2px solid #deebf3;
+    border-left: 2px solid #deebf3;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    margin: 4px;
+}
+.start-btn:active{
+    border-top:2px solid black ;
+    border-left:2px solid black ;
+    border-bottom:2px solid #deebf3 ;
+    border-right:2px solid #deebf3 ;
+}
+.start-logo{
+    width: 20px;
+    height: 14px;
+    background: url(./Pics/Win95-logo.png) transparent;
+    background-size: contain;
+    background-repeat: none;
+    padding: 2px;
+    margin: 0 5px;
+}
+.start-text{
+    font-weight: 800;
+
+}
+.taskbar-time{
+    width: 80px;
+    height: 72%;
+    background: #c3c6cd;
+    border-top: 2px solid #85888f;
+    border-left: 2px solid #85888f;
+    border-right: 2px solid #deebf3;
+    border-bottom: 2px solid #deebf3;
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+.desktop-shortcuts{
+    padding: 10px;
+    width: 100px;
+}
+
+.shortcut{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* position: relative; */
+    /* top: 30px;
+    left: 20px;*/
+    /* margin-top: 10px; */
+}
+.shortcut:hover{
+    cursor:default;
+}
+
+.shortcut-icon{
+    height: 50px;    
+    
+}
+.shortcut-name{
+    margin-top: 5px;
+    color: #fff;
+}
+
+
+/* modal */
+.about-me{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #bfbfbf;
+    /* width: 100px;
+    height: 100px; */
+    visibility:hidden;
+    overflow: hidden;
+    resize: both;
+    /* padding-bottom: 50px; */
+}
+
+
+
+
+#about-me{
+    border: 2px solid;
+    border-bottom-color:#535353;
+    border-left-color:#dbdbdb;
+    border-right-color: #535353;
+    border-top-color:#dbdbdb;
+}
+
+.title{
+background-color: #808080;
+padding: 2px 4px 3px 4px;
+display: relative;
+height: 15px;
+}
+h1{
+    font-size: 18px;
+    color: black;
+    font-size: 13px;
+    margin: 0;
+}
+.window-name{
+    position: absolute;
+}
+.control-box{
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+.control-box:hover, .control-box button:hover{
+    cursor: pointer;
+}
+.control-box button{
+    border: 2px solid;
+    border-bottom-color: #444;
+    border-right-color: #444;
+    border-left-color: #a6a6a6;
+    border-top-color: #a6a6a6;
+    background-color: #bfbfbf;
+    font-size: 9px;
+    line-height: 0;
+    padding: 1px;
+    height: 15px;
+    width: 15px;
+    top: 2px;
+}
+.minimize{
+
+}
+.expand{
+
+}
+.times{
+
+}
+.toolbar{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin:  0px;
+}
+.toolbar li{
+    list-style-type: none;
+    padding: 0 5px;
+}
+.content{
+    color: white;
+}
+#open-me:active{
+    background-color: #bfbfbf;
+}
+
+.about-me-inner{
+    border: 2px solid;
+    border-bottom-color: #c7c7c7;
+    border-right-color: #c7c7c7;
+    border-left-color: #808080;
+    border-top-color: #808080;
+    background-color: #fff;
+    height: 90%;
+}
+
+.abt-me-footer{
+    height: 50px;
+    width: inherit;
+    background-color: #bfbfbf;
+}
+
+#avatar > img{
+    height: 100px ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* shortcut-icons */
+.computer{
+    width: 50px;
+    background: url("https://www.pngkey.com/png/full/44-448393_windows-95-icons-png-picture-free-stock-icon.png");
+    background-size: cover;
+   
+}
+.recycle{
+    width: 50px;
+    background: url("https://telegram-stickers.github.io/public/stickers/windows-95/27.png");
+    background-size: contain;
+}
+.about{
+    width: 50px;
+    background: url("https://www.clipartmax.com/png/full/209-2090492_windows-95-notepad-splatoon.png");
+    background-size:cover;
+    /* margin-top: 10px; */
+}
+
+/* addborder */
+.bd{
+    border: 1px solid;
+    border-bottom: #535353;
+    border-right: #535353;
+    border-top: #bfbfbf;
+    border-left: #bfbfbf;
+}

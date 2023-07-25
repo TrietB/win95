@@ -1,0 +1,5 @@
+create an array store the 2nd latest position (w,h)
+push new one, remove last one
+ex: [...,{width:12, height:10},...]
+
+function minMaxClose(e,t){let n=document.getElementById(e);void 0===t?(close(n),minMax(n)):(!1!==t.close&&close(n,t.closeIcon),!1!==t.minMax&&minMax(n,t.minZone,t.minMaxIcons,t.minDoubleClick))}

@@ -1,83 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/style.css">
-    <script src="https://use.fontawesome.com/cccce3d64d.js"></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Windows 95</title>
+    <link rel="stylesheet" href="./assets/style.css"/>
+    <script
+      src="https://kit.fontawesome.com/89849850de.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <main class="main">
-        <div class="desktop">
-            <div class="desktop-shortcuts">
-                <div class="shortcut">
-                    <div class="shortcut-icon computer"></div>
-                    <p class="shortcut-name ">My Computer</p>  
-                </div>
-                <div class="shortcut">
-                    <div class="shortcut-icon recycle"></div>
-                    <p class="shortcut-name ">Recycle Bin</p>
-                </div> 
-                <div class="shortcut" id="open-me">
-                    <div class="shortcut-icon about"></div>
-                    <p class="shortcut-name "  >About me</p>
-                </div>
-            </div>
+      <div class="desktop">
+        <div class="desktop-shortcuts">
+          <div class="shortcut">
+            <div class="shortcut-icon computer"></div>
+            <p class="shortcut-name">My Computer</p>
+          </div>
+          <div class="shortcut">
+            <div class="shortcut-icon recycle"></div>
+            <p class="shortcut-name">Recycle Bin</p>
+          </div>
+          <div class="shortcut" id="open-me">
+            <div class="shortcut-icon about"></div>
+            <p class="shortcut-name">About me</p>
+          </div>
+          <div class="shortcut" id="trees">
+            <div class="shortcut-icon trees"></div>
+            <p class="shortcut-name">Trees</p>
+          </div>
+          <div class="shortcut" id="folder">
+            <div class="shortcut-icon folder"></div>
+            <p class="shortcut-name">Folder</p>
+          </div>
+          <div class="shortcut" id="disc-player">
+            <div class="shortcut-icon disc-player"></div>
+            <p class="shortcut-name">Music Player</p>
+          </div>
         </div>
-        <div class="taskbar">
-            <div class="start-btn">
-                <div class="start-logo">
-
-                </div>
-                <p class="start-text">
-                    Start
-                </p>
-            </div>
-            <div class="taskbar-time">
-                <p class="taskbar-time-text" id="time-box">
-                </p>
-            </div>
-            
+      </div>
+      <div class="taskbar">
+        <div class="start-btn">
+          <div class="start-logo"></div>
+          <p class="start-text">Start</p>
         </div>
-        <section>
-            <div class="about-me bd" id="about-me">
-                <div class="title">
-                    <div class="window-name">
-                    <h1>About Me</h1>
-                    </div>
-                    <div class="control-box">
-                        <button class="minimize"><span class="fa fa-minus"></span></button>
-                        <button class="expand"><span class="fa fa-square-o"></span></button>
-                        <button class="times" id="close"><span class="fa fa-times"></span></button> 
-                    </div>
-                </div>
-                <ul class="toolbar">
-                    <li><u>F</u>ile</li>
-                    <li><u>E</u>dit</li>
-                    <li><u>V</u>iew</li>
-                    <li><u>H</u>elp</li>
-                </ul>
-                <div class="about-me-inner">
-                    <div id="avatar">
-                        <img src="./assets/Pics/avatar.png"/>
-                    </div>
-                    <div id="story">
-                        Nostrud laborum esse ullamco tempor ex mollit amet. Nisi ipsum cupidatat dolor aliqua Lorem consequat ad laborum id enim proident pariatur irure. Quis ea ullamco non elit. Id dolor cupidatat sunt officia consequat occaecat anim sit deserunt nisi tempor.
-                        Labore labore veniam sint nulla incididunt sint exercitation in enim eiusmod. Nulla id consequat aliqua et deserunt. Laborum consequat culpa ullamco magna ex deserunt labore. Occaecat ad eu velit officia reprehenderit cupidatat eiusmod non velit fugiat duis pariatur. Ad aliquip cillum proident dolor deserunt et cupidatat occaecat reprehenderit. Exercitation quis veniam irure non nulla officia et ut magna cillum laborum.
-                        Exercitation laborum dolor ex pariatur anim ex. Commodo pariatur dolore quis in dolore cupidatat proident deserunt exercitation. Proident dolor occaecat ea sunt nisi consequat nulla ullamco nisi. Duis id aute voluptate aute. Occaecat irure consectetur ad sit sint veniam. Anim in adipisicing dolor quis consequat dolor excepteur eu incididunt esse.
-                    </div>
-                </div>
-                <div class="abt-me-footer">
-
-                </div>
+        <div class="start-menu">
+          <div class="start-menu-logo">Windows 95</div>
+          <ul class="start-menu-list">
+            <li class="menu-item">
+              <img
+                alt=""
+                src="./assets/Pics/start-menu-icons/program-files.png"
+              />
+              <span><u>P</u>rograms Files</span>
+              <i class="fa-solid fa-play fa-sharp"></i>
+            </li>
+            <li class="menu-item">
+              <img alt="" src="./assets/Pics/start-menu-icons/documents.png" />
+              <span><u>D</u>ocuments</span>
+              <i class="fa-sharp fa-solid fa-play"></i>
+            </li>
+            <li class="menu-item">
+              <img alt="" src="./assets/Pics/start-menu-icons/settings.png" />
+              <span><u>S</u>ettings</span>
+              <i class="fa-sharp fa-solid fa-play"></i>
+            </li>
+            <li class="menu-item">
+              <img alt="" src="./assets/Pics/start-menu-icons/find.png" />
+              <span><u>F</u>ind</span> <i class="fa-sharp fa-solid fa-play"></i>
+            </li>
+            <li class="menu-item">
+              <img alt="" src="./assets/Pics/start-menu-icons/help.png" />
+              <span><u>H</u>elp</span>
+            </li>
+            <li class="menu-item">
+              <img alt="" src="./assets/Pics/start-menu-icons/run.png" />
+              <span><u>R</u>un...</span>
+            </li>
+            <li class="menu-item shut-down">
+              <img alt="" src="./assets/Pics/start-menu-icons/shut-down.png" />
+              <span> Sh<u>u</u>t Down...</span>
+            </li>
+          </ul>
+        </div>
+        <div class="minimized-bar">
+          <!-- <button class="minimized-item">About Me</button> -->
+        </div>
+        <div class="taskbar-time">
+          <p class="taskbar-time-text" id="time-box"></p>
+        </div>
+      </div>
+      <div class="modals-section">
+        <div class="about-me" id="about-me">
+          <header class="window-header">
+            <div class="title">
+              <!-- change bg color to 000080, change text color to white -->
+              <div class="window-name">
+                <h1>About Me</h1>
+              </div>
+              <div class="control-box">
+                <button class="minimize">
+                  <span class="fa fa-minus"></span>
+                </button>
+                <button class="expand" id="expand-about-me">
+                  <span class="fa fa-square-o"></span>
+                </button>
+                <button class="times" id="close-about-me">
+                  <span class="fa fa-times"></span>
+                </button>
+              </div>
             </div>
-        </section>
+            <ul class="toolbar">
+              <li><u>F</u>ile</li>
+              <li><u>E</u>dit</li>
+              <li><u>V</u>iew</li>
+              <li><u>H</u>elp</li>
+            </ul>
+          </header>
+          <div class="about-me-inner">
+            <div id="avatar">
+              <img alt="" src="./assets/Pics/avatar.png" />
+            </div>
+            <div id="story">
+              Nostrud laborum esse ullamco tempor ex mollit amet. Nisi ipsum
+              cupidatat dolor aliqua Lorem consequat ad laborum id enim proident
+              pariatur irure. Quis ea ullamco non elit. Id dolor cupidatat sunt
+              officia consequat occaecat anim sit deserunt nisi tempor. Labore
+              labore veniam sint nulla incididunt sint exercitation in enim
+              eiusmod. Nulla id consequat aliqua et deserunt. Laborum consequat
+              culpa ullamco magna ex deserunt labore. Occaecat ad eu velit
+              officia reprehenderit cupidatat eiusmod non velit fugiat duis
+              pariatur. Ad aliquip cillum proident dolor deserunt et cupidatat
+              occaecat reprehenderit. Exercitation quis veniam irure non nulla
+              officia et ut magna cillum laborum. Exercitation laborum dolor ex
+              pariatur anim ex. Commodo pariatur dolore quis in dolore cupidatat
+              proident deserunt exercitation. Proident dolor occaecat ea sunt
+              nisi consequat nulla ullamco nisi. Duis id aute voluptate aute.
+              Occaecat irure consectetur ad sit sint veniam. Anim in adipisicing
+              dolor quis consequat dolor excepteur eu incididunt esse.
+            </div>
+          </div>
+          <div class="abt-me-footer"></div>
+        </div>
+        <div class="CV" id="CV">
+          <header class="window-header">
+            <div class="title">
+              <div class="window-name">
+                <h1>My CV</h1>
+              </div>
+              <div class="control-box">
+                <button class="minimize">
+                  <span class="fa fa-minus"></span>
+                </button>
+                <button class="expand" id="expand-CV">
+                  <span class="fa fa-square-o"></span>
+                </button>
+                <button class="times" id="close-CV">
+                  <span class="fa fa-times"></span>
+                </button>
+              </div>
+            </div>
+            <ul class="toolbar">
+              <li><u>F</u>ile</li>
+              <li><u>E</u>dit</li>
+              <li><u>V</u>iew</li>
+              <li><u>H</u>elp</li>
+            </ul>
+          </header>
+          <div class="about-me-inner" id="pdf-viewer"></div>
+          <div class="abt-me-footer"></div>
+        </div>
+      </div>
     </main>
-    
-
-
-<script src="./index.js"></script>
-</body>
+    <script src="./index.js"></script>
+    <!-- <script type="text/javascript" src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script> -->
+    <!-- <script src="./adobeViewer.js"></script> -->
+  </body>
 </html>

@@ -124,7 +124,15 @@ setInterval(updateTime, 1000);
 const dragHeader = document.querySelectorAll(".window-header");
 console.log(dragHeader)
 
+console.log(window.outerWidth, window.innerWidth)
+
 function dragElement(element, draggable) {
+
+  if(window.innerWidth < 768){
+    console.log(window.innerWidth)
+    return
+  } else {
+
   //   console.log(element);
   let pos1 = 0,
     pos2 = 0,
@@ -164,10 +172,19 @@ function dragElement(element, draggable) {
     document.onmouseup = null;
     document.onmousemove = null;
   };
+  }
 }
 
-dragHeader.forEach((element) => {
+  // dragElement(aboutMeModal, element)
+  window.addEventListener('resize', ()=>{
+    dragHeader.forEach(element=>{
   dragElement(aboutMeModal, element)
+    })
+  } )
+
+
+dragHeader.forEach((element) => {
+  // dragElement(aboutMeModal, element)
 
   // dragElement(modalCV, element);
 })

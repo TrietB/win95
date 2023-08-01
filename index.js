@@ -10,9 +10,13 @@ let desktop = document.querySelector(".desktop");
 let mini = document.getElementsByClassName("minimize");
 let trees = document.querySelector("#trees");
 let modalCV = document.querySelector("#CV");
+let miniFolder = document.querySelector("#folder");
+let miniPlayer = document.querySelector("#disc-player");
+
 
 OpenDoc.ondblclick = function () {
   aboutMeModal.style.visibility = "visible";
+  aboutMeModal.style.zIndex = 1
 };
 closeDoc.onclick = () => {
   aboutMeModal.style.visibility = "hidden";
@@ -21,6 +25,7 @@ closeDoc.onclick = () => {
 
 trees.ondblclick = function () {
   modalCV.style.visibility = "visible";
+  modalCV.style.zIndex = 1
 };
 
 // startButton.onclick = () => {
@@ -34,7 +39,7 @@ document.addEventListener('click', (e)=>{
   // if(e.target.closest('.start-menu')){
   //   startMenu.style.visibility = "hidden"
   // }
-  console.log(e.target)
+  // console.log(e.target)
   if(e.target.classList.contains('desktop')){
     startMenu.style.visibility = 'hidden'
   } else {
@@ -196,30 +201,85 @@ const menuItems = document.querySelectorAll(".menu-item");
 
 //check if modal is active
 // assign id to to each modal?
-const minimizeBtn = document.querySelector(".minimize");
+const minimizeBtn = document.querySelectorAll(".minimize");
 
 const minimizedFunc = (elements) => {
   const minimizedBar = document.querySelector(".minimized-bar");
-  const miniTrees = document.querySelector("#trees");
-  const miniFolder = document.querySelector("#folder");
-  const miniPlayer = document.querySelector("#disc-player");
-
+  console.log(minimizedBar.querySelectorAll('.minimized-item'))
   let items
   if(elements) {
     console.log(elements)
     items = elements
+    items.forEach((item,i) => {
+      // if(minimizedBar.querySelectorAll('.minimized-item').includes(item)){
+      //   console.log('matched')
+      // }
+      console.log(item);
+
+      const minimizedTab = document.createElement("button");
+      minimizedTab.id = `${item}-minimized`
+      minimizedTab.className = "minimized-item";
+      minimizedTab.innerHTML = item;
+      minimizedBar.appendChild(minimizedTab);
+    });
   }
   
-  items.forEach((item) => {
-    const minimizedTab = document.createElement("button");
-    minimizedTab.className = "minimized-item";
-    minimizedTab.innerHTML = item;
-    minimizedBar.appendChild(minimizedTab);
-    console.log(item);
-  });
 };
-let tabs = []
-let stringTabs = JSON.stringify(tabs)
-localStorage.setItem('minimize', stringTabs)
-console.log(localStorage.getItem('minimize'))
+
+// minimizedFunc(tabs)
+// console.log(tabs)
+
+window.onbeforeunload = function()
+    {
+        localStorage.removeItem('minimize');
+    };
+
+const saveLocalStorage = () => {
+  let savedTabs = []
+
+  // console.log(localStorage.getItem('minimize'))
+  minimizeBtn.forEach((btn, i) => {
+    console.log(btn.value, i)
+    btn.addEventListener('click', () =>  {
+      for(let i=0; i<=savedTabs.length; i++){
+        if(savedTabs.includes(btn.value)){
+          return
+        }else{
+          savedTabs.push(btn.value)
+          let stringTabs = JSON.stringify(savedTabs)
+          localStorage.setItem('minimize', stringTabs)
+          let tabs = JSON.parse(localStorage.getItem('minimize'))
+          console.log(tabs)
+          minimizedFunc(tabs)
+        }
+      }
+    })
+  })
+
+
+}
+saveLocalStorage()
 // minimizedFunc(tabs);
+
+// let mutationsObserver = new MutationObserver((mutations)=> {
+//   mutations.forEach((mutation)=>{
+//     console.log(mutation)
+//   })
+// })
+// mutationsObserver.observe(aboutMeModal,{
+//   attributes: true,
+//   characterData: true,
+//   childList: true,
+//   subtree: true,
+//   attributeOldValue: true,
+//   characterDataOldValue: true
+// })
+
+// minimize app to taskbar
+
+// access app in taskbar
+
+// change focus when switch app
+
+
+

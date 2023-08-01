@@ -261,11 +261,11 @@ const saveLocalStorage = () => {
 saveLocalStorage()
 // minimizedFunc(tabs);
 
-let mutationsObserver = new MutationObserver((mutations)=> {
-  mutations.forEach((mutation)=>{
-    console.log(mutation)
-  })
-})
+// let mutationsObserver = new MutationObserver((mutations)=> {
+//   mutations.forEach((mutation)=>{
+//     console.log(mutation)
+//   })
+// })
 // mutationsObserver.observe(aboutMeModal,{
 //   attributes: true,
 //   characterData: true,

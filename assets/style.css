@@ -56,6 +56,12 @@ html, body{
     border-bottom:2px solid #deebf3 ;
     border-right:2px solid #deebf3 ;
 }
+/* .active{
+    border-top:2px solid black ;
+    border-left:2px solid black ;
+    border-bottom:2px solid #deebf3 ;
+    border-right:2px solid #deebf3 ;
+} */
 .start-logo{
     width: 20px;
     height: 14px;
@@ -155,13 +161,16 @@ html, body{
     border-left: 2px solid #deebf3;
     border-right: 2px solid black;
     border-bottom: 2px solid black;
-    height: auto;
-    width: 120px;
+    height: 90%;
+    width: 200px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 5px;
+    /* justify-content: center; */
+    margin-left: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
     font-size: 16px;
+    
 }
 
 .active{

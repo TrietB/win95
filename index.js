@@ -12,6 +12,7 @@ let trees = document.querySelector("#trees");
 let modalCV = document.querySelector("#CV");
 let miniFolder = document.querySelector("#folder");
 let miniPlayer = document.querySelector("#disc-player");
+let closeCV = document.getElementById('close-CV')
 
 
 OpenDoc.ondblclick = function () {
@@ -22,6 +23,11 @@ closeDoc.onclick = () => {
   aboutMeModal.style.visibility = "hidden";
 
 };
+closeCV.onclick = () => {
+  modalCV.style.visibility = 'hidden'
+}
+
+
 
 trees.ondblclick = function () {
   modalCV.style.visibility = "visible";
@@ -33,6 +39,7 @@ trees.ondblclick = function () {
 // }
 startButton.addEventListener("click", () => {
   startMenu.style.visibility = "visible";
+  startButton.classList.add('active')
 });
 
 document.addEventListener('click', (e)=>{
@@ -42,6 +49,7 @@ document.addEventListener('click', (e)=>{
   // console.log(e.target)
   if(e.target.classList.contains('desktop')){
     startMenu.style.visibility = 'hidden'
+    startButton.classList.remove('active')
   } else {
     console.log('false')
   }
@@ -205,16 +213,18 @@ const minimizeBtn = document.querySelectorAll(".minimize");
 
 const minimizedFunc = (elements) => {
   const minimizedBar = document.querySelector(".minimized-bar");
-  console.log(minimizedBar.querySelectorAll('.minimized-item'))
+  let miniItem = minimizedBar.querySelectorAll('.minimized-item')
   let items
+
   if(elements) {
-    console.log(elements)
     items = elements
+    console.log(items)
+    minimizedBar.innerHTML = ''
     items.forEach((item,i) => {
       // if(minimizedBar.querySelectorAll('.minimized-item').includes(item)){
       //   console.log('matched')
       // }
-      console.log(item);
+      console.log(miniItem);
 
       const minimizedTab = document.createElement("button");
       minimizedTab.id = `${item}-minimized`

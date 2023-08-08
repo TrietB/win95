@@ -269,6 +269,7 @@ html, body{
         top: 50px;
         transform: none;
         width: 99%;
+        height: 85%;
     }
 }
 
@@ -327,11 +328,15 @@ h1{
 .window-name{
     position: absolute;
 }
+.window-name > h1{
+    color:#a6a6a6;
+}
 .control-box{
     position: absolute;
     right: 0;
     top: 0;
-
+    /* padding: 2px; */
+    margin-right: 3px
 }
 .control-box:hover, .control-box button:hover{
     cursor: pointer;

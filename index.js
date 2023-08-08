@@ -55,53 +55,6 @@ document.addEventListener('click', (e)=>{
   }
 })
 
-// console.log(mini[0], mini[1]);
-
-
-// mini[0].addEventListener("click", () => {
-//   if(tabs.includes('About me')){
-//     return
-//   } else{
-//     console.log("mini about me");
-//     tabs.push('About me')
-//     aboutMeModal.style.visibility = 'hidden'
-//     minimizedFunc(tabs)  
-//     tabs.shift()  
-//   }
-// });
-// mini[1].addEventListener('click', ()=> {
-//   if(tabs.includes('Trees')){
-//     modalCV.style.visibility = 'hidden'
-//     return
-//   } else{
-//     console.log("mini trees");
-//     tabs.push('Trees')
-//     modalCV.style.visibility = 'hidden'
-//     minimizedFunc(tabs)
-//     tabs.shift()    
-//   }
-// })
-
-// const resizeObserver = new ResizeObserver((entries) => {
-//   entries.forEach((entry) => {
-//     let position = entry.contentRect;
-//     console.log(position.height, position.width);
-//     // eminipandModal(position.width, position.height)
-//   });
-// });
-// resizeObserver.observe(aboutMeModal);
-
-// const eminipandModal = (expandDoc.onclick = (width, height) => {
-//   if (aboutMeModal.classList.contains("full-screen")) {
-//     aboutMeModal.classList.remove("full-screen");
-//     aboutMeModal.style.width = width;
-//     aboutMeModal.style.height = height;
-//   } else {
-//     aboutMeModal.style.top = null;
-//     aboutMeModal.style.left = null;
-//     aboutMeModal.classList.add("full-screen");
-//   }
-// });
 
 //clock
 const updateTime = () => {
@@ -166,7 +119,7 @@ function dragElement(element, draggable) {
   if (draggable) {
     draggable.onmousedown = dragMouseDown
   } else {
-    // element.onmousedown = dragMouseDown
+    element.onmousedown = dragMouseDown
   }
 
   const elementDrag = (e) => {
@@ -188,12 +141,12 @@ function dragElement(element, draggable) {
   }
 }
 
-  // dragElement(aboutMeModal, element)
   window.addEventListener('resize', ()=>{
     dragHeader.forEach(element=>{
   dragElement(aboutMeModal, element)
     })
   } )
+  dragElement(aboutMeModal)
 
 
 dragHeader.forEach((element) => {
